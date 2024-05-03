@@ -1,0 +1,383 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.black {
+  background: black;
+  color: white;
+}
+
+.navbar .pc-nav {
+  display: none;
+}
+.navbar .mobile-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.navbar .mobile-nav .hamburger {
+  position: absolute;
+  right: 10px;
+  border: 3px solid #701891;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.navbar .mobile-nav .hamburger .line {
+  background: #701891;
+  height: 3px;
+  width: 70%;
+}
+
+.overlay {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 30vh;
+  background: #701891;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  position: absolute;
+  top: -30vh;
+  transition: all 2s ease-in-out;
+}
+.overlay .themes {
+  display: none;
+}
+
+.banner .pc-banner {
+  display: none;
+}
+.banner .mobile-banner {
+  display: block;
+}
+.banner .mobile-banner .container .left {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.banner .mobile-banner .container .left .heading {
+  font-weight: 800;
+  font-size: 40px;
+  width: 80%;
+}
+.banner .mobile-banner .container .left .paratext {
+  font-weight: 800;
+  width: 80%;
+}
+.banner .mobile-banner .container .left .banner-btns {
+  display: flex;
+  gap: 25px;
+}
+.banner .mobile-banner .container .left .banner-btns button {
+  height: 2.5rem;
+}
+.banner .mobile-banner .container .left .banner-btns .discover {
+  background-color: #701891;
+  color: white;
+  border: none;
+  padding: 0 9px;
+}
+.banner .mobile-banner .container .left .banner-btns .session {
+  border: 2px solid #701891;
+  background: white;
+  color: black;
+  font-weight: 600;
+  padding: 0 9px;
+}
+.banner .mobile-banner .container .left .watch {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.banner .mobile-banner .container .left .watch img {
+  height: 25px;
+}
+.banner .mobile-banner .container .left .watch p {
+  font-size: 15px;
+  color: #701891;
+}
+.banner .mobile-banner .container .left .trusted {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: -10px;
+}
+.banner .mobile-banner .container .left .trusted img {
+  height: 25px;
+}
+.banner .mobile-banner .container .right {
+  margin-top: 1rem;
+}
+.banner .mobile-banner .container .right .banner-pics .top-pics {
+  display: flex;
+}
+.banner .mobile-banner .container .right .banner-pics .top-pics .pic1 {
+  width: 50%;
+}
+.banner .mobile-banner .container .right .banner-pics .top-pics .pic2 {
+  width: 50%;
+}
+.banner .mobile-banner .container .right .banner-pics .top-pics img {
+  width: 100%;
+}
+.banner .mobile-banner .container .right .banner-pics .bottom-pics {
+  display: flex;
+}
+.banner .mobile-banner .container .right .banner-pics .bottom-pics .pic1 {
+  width: 50%;
+}
+.banner .mobile-banner .container .right .banner-pics .bottom-pics .pic2 {
+  width: 50%;
+}
+.banner .mobile-banner .container .right .banner-pics .bottom-pics img {
+  width: 100%;
+}
+
+.about {
+  margin-top: 1.5rem;
+}
+.about .bout {
+  font-weight: 800;
+  font-size: 18px;
+}
+.about .mobile-about {
+  display: block;
+}
+.about .mobile-about .text1 p {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about .mobile-about .imegiz {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 15rem;
+}
+.about .mobile-about .imegiz img {
+  height: 11rem;
+  width: 10rem;
+}
+.about .mobile-about .imegiz .second-pic {
+  padding-top: 4rem;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* 
+Extra small devices (portrait phones, less than 576px) 
+No media query since this is the default in Bootstrap because it is "mobile first"
+*/
+/* Small devices (landscape phones, 576px and up) */
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .navbar .mobile-nav {
+    display: none;
+  }
+  .navbar .pc-nav {
+    display: block;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar .pc-nav span {
+    color: #701891;
+  }
+  .navbar .pc-nav .links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-right: 20px;
+  }
+  .navbar .pc-nav .links p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .navbar .pc-nav .theme {
+    display: flex;
+    margin-right: 5px;
+  }
+  .navbar .pc-nav .theme img {
+    height: 30px;
+  }
+  .navbar .pc-nav .theme .top {
+    position: absolute;
+    display: none;
+  }
+  .navbar .pc-nav .theme2 {
+    display: flex;
+    margin-right: 15px;
+  }
+  .navbar .pc-nav .theme2 img {
+    height: 30px;
+  }
+  .navbar .pc-nav .theme2 .top {
+    position: absolute;
+    display: none;
+  }
+  .navbar .pc-nav .switch .top {
+    display: block;
+    position: relative;
+  }
+  .navbar .pc-nav .switch .bottom {
+    display: none;
+    position: absolute;
+  }
+  .banner {
+    width: 100%;
+  }
+  .banner .mobile-banner {
+    display: none;
+  }
+  .banner .pc-banner {
+    display: block;
+  }
+  .banner .pc-banner .container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .banner .pc-banner .container .left {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .banner .pc-banner .container .left .heading {
+    font-weight: 800;
+    font-size: 30px;
+    width: 100%;
+  }
+  .banner .pc-banner .container .left .paratext {
+    font-weight: 800;
+  }
+  .banner .pc-banner .container .left .banner-btns {
+    display: flex;
+    gap: 25px;
+  }
+  .banner .pc-banner .container .left .banner-btns button {
+    height: 2.5rem;
+  }
+  .banner .pc-banner .container .left .banner-btns .discover {
+    background-color: #701891;
+    color: white;
+    border: none;
+    padding: 0 9px;
+  }
+  .banner .pc-banner .container .left .banner-btns .session {
+    border: 2px solid #701891;
+    background: white;
+    color: black;
+    font-weight: 600;
+    padding: 0 9px;
+  }
+  .banner .pc-banner .container .left .watch {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+  .banner .pc-banner .container .left .watch img {
+    height: 25px;
+  }
+  .banner .pc-banner .container .left .watch p {
+    font-size: 15px;
+    color: #701891;
+  }
+  .banner .pc-banner .container .left .trusted {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: -10px;
+  }
+  .banner .pc-banner .container .left .trusted img {
+    height: 25px;
+  }
+  .banner .pc-banner .container .pics {
+    display: flex;
+    gap: 15px;
+  }
+  .banner .pc-banner .container .pics img {
+    width: 130px;
+  }
+  .banner .pc-banner .container .pics .pic1 {
+    padding-top: 3rem;
+  }
+  .banner .pc-banner .container .pics .pic2 {
+    padding-bottom: 3rem;
+  }
+}
+/* Large devices (desktops, 992px and up) */
+/* Extra large devices (large desktops, 1200px and up) */
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Custom media queries
+*/
+/* Set width to make card deck cards 100% width *//*# sourceMappingURL=style.css.map */
