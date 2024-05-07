@@ -1,10 +1,4 @@
 
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -32,6 +26,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+    font-family: sans-serif;
 }
 ol, ul {
 	list-style: none;
@@ -80,6 +75,7 @@ table {
             justify-content: center;
             align-items: center;
             gap: 5px;
+            
 
             .line{
                 background: #701891;
@@ -89,9 +85,17 @@ table {
         }
     }
 }
+.themes{
+    img{
+        height: 15px;
+        display: none;
+    }
+}
 .overlay{
+    display: none;
     width: fit-content;
-    height: 30vh;
+    height: 0;
+    padding: 1rem 1rem;
     background: #701891;
     color: white;
     display: flex;
@@ -99,9 +103,45 @@ table {
     justify-content: left;
     position: absolute;
     top: -30vh;
+    gap: 5px;
+    right: 0;
     transition: all 2s ease-in-out;
+    a{
+        text-decoration: none;
+        color: white;
+        display: none;
+    }
     .themes{
         display: none;
+        display: flex;
+    }
+}
+.open{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: none;
+    .line{
+        position: absolute;
+    }
+    .line1{
+        transform: rotate(45deg);
+        transition-duration: 0.5s;
+    }
+    .line2{
+        transform: rotate(-45deg);
+        transition-duration: 0.5s;
+    }
+    .middle{
+        display: none;
+    }
+}
+.drop{
+    margin-top: 30vh;
+    transition: all 2s ease-in-out;
+    .themes{
+        display: block;
     }
 }
 .banner{
@@ -209,7 +249,11 @@ table {
     .bout{
         font-weight: 800;
         font-size: 18px;
+        margin-bottom: 10px;
 
+    }
+    .pc-about{
+        display: none;
     }
     .mobile-about{
         display: block;
@@ -225,7 +269,10 @@ table {
             align-items: center;
             display: flex;
             justify-content: center;
-            height: 15rem;
+            // height: 15rem;
+            margin-top: -2rem;
+            margin-bottom: 2rem;
+
 
 
             img{
@@ -233,7 +280,317 @@ table {
                 width: 10rem;
             }
             .second-pic{
-                padding-top: 4rem;
+                padding-top: 7rem;
+            }
+        }
+        .imeg{
+            margin-top: 1rem;
+            height: 20rem;
+            background-image: url('/IMAGEZ/Rectangle\ 27.png');
+            background-size:100%;
+            background-repeat: no-repeat;
+
+            img{
+                width: 100%;
+            }
+        }
+        .find{
+            background-color: #701891;
+                color: white;
+                border: none;
+                padding: 0 9px;
+                height: 2rem;
+                margin-top: 1rem;
+
+        }
+    }
+}
+.pc-services{
+    display: none;
+}
+.services-heading{
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 2rem;
+
+}
+.mobile-services{
+    display: block;
+    margin-top: 1rem;
+    
+    .pictures{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .mapics{
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+            .grid1{
+                background-image: url('/IMAGEZ/Rectangle\ 27.png');
+                font-size: 30px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                gap: 50px;
+                height: 30rem;
+                position: relative;
+                h2{
+                    position: absolute;
+                    bottom: 2px;
+                    
+                }
+                .arrow{
+                    background-color: #701891;
+                    width: 35px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    bottom: 0;
+                    position: absolute;
+                    right: 0;
+                    img{
+                        height: 100%;
+                        
+                    }
+                }
+                
+            }
+            .grid2{
+                background-image: url('/IMAGEZ/Screen\ Shot\ 2022-11-24\ at\ 11.35.23.png');
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                gap: 50px;
+                height: 30rem;
+                position: relative;
+                .cancel{
+                    background-color: beige;
+                    height: 35px;
+                    width: 35px;
+                    display: inline-block;
+                    position: absolute;
+                        bottom: 0;
+                        right: 0;
+
+                    img{
+                        height: 35px;
+                        
+                        
+                        }
+                }
+            }
+            .grid3{
+                background-image: url('/IMAGEZ/Rectangle\ 47.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-size: 30px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                gap: 50px;
+                height: 30rem;
+                position: relative;
+                h2{
+                    position: absolute;
+                    bottom: 2px;
+                    
+                }
+                .arrow{
+                    background-color: #701891;
+                    width: 35px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    bottom: 0;
+                    position: absolute;
+                    right: 0;
+                    img{
+                        height: 100%;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+.pc-clients{
+    display: none;
+}
+.mobile-clients{
+    display: block;
+    margin-top: 1rem;
+    .header{
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+    .testimonial-pic{
+        height: 25rem;
+        position: relative;
+        margin-bottom: 1rem;
+        .foward{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: #701891;
+            width: 40px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 70%;
+            }
+        }
+
+    }
+    .name{
+        font-weight: 600;
+    }
+    .position{
+        font-weight: 400;
+    }
+    .testimonial1{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 1rem;
+        .t1{
+            background-image: url('/IMAGEZ/Rectangle\ 34.png');
+            background-position: center;
+        }
+    }
+    .testimonial2{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 1rem;
+        .name{
+            margin-bottom: 10px;
+        }
+        .position{
+            margin-bottom: 10px;
+        }
+        .t2{
+            background-image: url('/IMAGEZ/Rectangle\ 40.png');
+            background-position: center;
+        }
+    }
+}
+.pc-insta{
+
+    display: none;
+}
+.insta{
+    margin-top: 9rem;
+    margin-bottom: 1rem;
+    .seen{
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+        
+    }
+    .insta-pics{
+        display: flex;
+        height: 12rem;
+        margin-bottom: 1rem;
+        gap: 5px;
+        justify-content: center;
+        .denga{
+            padding-bottom: 2rem;
+        }
+        .zasi{
+            padding-top: 2rem ;
+        }
+    }
+    .hashtag{
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    .followBtn{
+        text-align: center;
+        .follow{
+            background-color: #701891;
+            color: white;
+            border: none;
+            padding: 0 9px;
+            height: 30px;
+        }
+    }
+}
+
+.active{
+    display: block !important;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.footer{
+    .pc-footer{
+        display: none   ;
+    }
+    .mobile-footer{
+        display: block;
+        background-color: #701891;
+        height: 15vh;
+        width: 100%;
+        color: white;
+        padding-left: 5px;
+        display: flex;
+        .row{
+        
+            .ftr-left{
+                display: flex;
+                flex-direction: column;
+                background-color: red;
+                width: 70%;
+               .ftr-logo{
+                height: 2rem;
+                width: 5rem;
+
+               } 
+               .copyright{
+                display: flex;
+                font-size: 10px;
+                align-items: center;
+                gap: 5px;
+                margin-top: 5px;
+                img{
+                    height: 15px;
+                }
+               }
+               .media{
+                margin-top: 5px;
+                img{
+                    height: 15px;
+                }
+               }
+               .rights{
+                font-size: 10px;
+                padding-left: 19px;
+               }
+
+
+            }
+            .ftr-right{
+                background-color: blue;
+                width: 50%;
+                
+
             }
         }
     }
@@ -303,7 +660,7 @@ No media query since this is the default in Bootstrap because it is "mobile firs
             }
             .top{
                 position: absolute;
-                display: none;
+                // display: none;
                 
         
             }
@@ -317,16 +674,20 @@ No media query since this is the default in Bootstrap because it is "mobile firs
             }
             .top{
                 position: absolute;
-                display: none;
+                // display: none !important;
                 
         
             }
-            
+            .bottom{
+                display: none;
+            }
            }
            .switch{
             .top{
-                display: block;
+                display: block !important;
                 position: relative;
+
+
             }
             .bottom{
                 display: none;
@@ -430,6 +791,362 @@ No media query since this is the default in Bootstrap because it is "mobile firs
     }
 }
  }
+ .about{
+    .mobile-about{
+        display: none;
+    }
+    .bout{
+        font-size: 23px;
+        margin-top: 4rem;
+    }
+    .pc-about{
+        padding-left: 10%;
+        display: block;
+        display: flex;
+        margin-top: 1rem;
+
+       .left-about{
+        // background-color: green;
+        width: 40%;
+        .text1{
+            text-align: left;
+            p{
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            }
+            .imegiz{
+                align-items: center;
+                display: flex;
+                
+                // height: 15rem;
+                margin-top: -2rem;
+                margin-bottom: 2rem;
+    
+    
+    
+                img{
+                    height: 18rem;
+                    width: 13rem;
+                }
+                .second-pic{
+                    padding-top: 7rem;
+                }
+            }
+            
+       }
+       .right-about{
+        margin-left: 3rem;
+        margin-top: -1rem;
+        width: 40%;
+        .imeg{
+            margin-top: 1rem;
+            height: 22rem;
+            background-image: url('/IMAGEZ/Rectangle\ 27.png');
+            background-size:100%;
+            background-repeat: no-repeat;
+
+            img{
+                width: 100%;
+            }
+        }
+        .text-2{
+            margin-top: 1rem;
+        }
+        .find{
+            background-color: #701891;
+                color: white;
+                border: none;
+                padding: 0 9px;
+                height: 2rem;
+                margin-top: 1rem;
+
+        }
+
+
+       }
+    }
+ }
+ .mobile-services{
+    display: none;
+ }
+ .services-heading{
+    font-weight: 700;
+    font-size: 20px;
+ }
+ .pc-services{
+    display: block;
+    .services-heading{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .pictures{
+        display: flex;
+
+        gap: 1rem;
+        margin-top: 1rem;
+
+        .mapics{
+            width: 100%;
+            display: flex;
+            gap: 10px;
+            margin-left: 5%;
+            // flex-direction: column;
+            .grid1{
+                background-image: url('/IMAGEZ/Rectangle\ 27.png');
+                background-repeat: no-repeat;
+                font-size: 30px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                gap: 50px;
+                height: 30rem;
+                width: 20rem;
+                position: relative;
+                h2{
+                    position: absolute;
+                    bottom: 2px;
+                    
+                }
+                .arrow{
+                    background-color: #701891;
+                    width: 35px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    bottom: 0;
+                    position: absolute;
+                    right: 0;
+                    img{
+                        height: 100%;
+                        
+                    }
+                }
+                
+            }
+            .grid2{
+                background-image: url('/IMAGEZ/Screen\ Shot\ 2022-11-24\ at\ 11.35.23.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                gap: 50px;
+                height: 30rem;
+                width: 20rem;
+                position: relative;
+                .cancel{
+                    background-color: beige;
+                    height: 35px;
+                    width: 35px;
+                    display: inline-block;
+                    position: absolute;
+                        bottom: 0;
+                        right: 0;
+
+                    img{
+                        height: 35px;
+                        
+                        
+                        }
+                }
+            }
+            .grid3{
+                background-image: url('/IMAGEZ/Rectangle\ 47.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                font-size: 30px;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                gap: 50px;
+                height: 30rem;
+                width: 20rem;
+                position: relative;
+                h2{
+                    position: absolute;
+                    bottom: 2px;
+                    
+                }
+                .arrow{
+                    background-color: #701891;
+                    width: 35px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    bottom: 0;
+                    position: absolute;
+                    right: 0;
+                    img{
+                        height: 100%;
+                        
+                    }
+                }
+            }
+        }
+    }
+ }
+ .clients{
+    
+    .mobile-clients{
+        display: none;
+     }
+    
+     .pc-clients{
+        display: block;
+        margin-top: 1rem;
+        
+        .header{
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            margin-top: 5rem;
+        }
+        .clients-left{
+            margin-top: 3rem;
+            display: flex;
+            align-items: center;
+            padding-left: 10%;
+            .header{
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 1rem;
+            }
+            .testimonial-pic{
+                height: 20rem;
+                width: 25rem;
+                position: relative;
+                margin-bottom: 1rem;
+                .foward{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background-color: #701891;
+                    width: 40px;
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+        
+                    img{
+                        width: 70%;
+                    }
+                }
+        
+            }
+            .name{
+                font-weight: 600;
+            }
+            .position{
+                font-weight: 400;
+
+            }
+            .para{
+                width: 60%;
+            }
+            .testimonial1{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 1rem;
+                .t1{
+                    background-image: url('/IMAGEZ/Rectangle\ 34.png');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+        }
+        
+     }
+     .clients-right{
+        margin-top: -2.5rem;
+        .testimonial2{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 1rem;
+            .name{
+                margin-bottom: 10px;
+                font-weight: 700;
+            }
+            .position{
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
+            .para{
+                width: 70%;
+            }
+            .t2{
+                background-image: url('/IMAGEZ/Rectangle\ 40.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                // height: 20rem;
+            }
+        }
+        .testimonial-pic{
+            height: 20rem;
+            width: 25rem;
+            position: relative;
+            margin-bottom: 1rem;
+            .foward{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-color: #701891;
+                width: 40px;
+                height: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    width: 70%;
+                }
+            }
+    
+        }
+    }
+ }
+}
+.insta{
+    .mobile-insta{
+        display: none;
+    }
+    .pc-insta{
+
+        display: block;
+        margin-top: -4rem;
+        .seen{
+            margin-bottom: 2rem;
+            h2{
+                font-size: 20px;
+                span{
+                    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                }
+            }
+            
+        }
+        .insta-pics{
+            text-align: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10rem;
+            .pamusoro{
+                height: 18rem;
+                padding-bottom: 3rem;
+                
+            }
+            .pazasi{
+                height: 18rem;
+                padding-top: 3rem;
+            }
+        }
+    }
+}
 }
 
 /* Large devices (desktops, 992px and up) */

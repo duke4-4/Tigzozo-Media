@@ -1,7 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -31,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  font-family: sans-serif;
 }
 
 ol, ul {
@@ -86,10 +83,17 @@ table {
   width: 70%;
 }
 
+.themes img {
+  height: 15px;
+  display: none;
+}
+
 .overlay {
+  display: none;
   width: -moz-fit-content;
   width: fit-content;
-  height: 30vh;
+  height: 0;
+  padding: 1rem 1rem;
   background: #701891;
   color: white;
   display: flex;
@@ -97,10 +101,48 @@ table {
   justify-content: left;
   position: absolute;
   top: -30vh;
+  gap: 5px;
+  right: 0;
   transition: all 2s ease-in-out;
+}
+.overlay a {
+  text-decoration: none;
+  color: white;
+  display: none;
 }
 .overlay .themes {
   display: none;
+  display: flex;
+}
+
+.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: none;
+}
+.open .line {
+  position: absolute;
+}
+.open .line1 {
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+.open .line2 {
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+.open .middle {
+  display: none;
+}
+
+.drop {
+  margin-top: 30vh;
+  transition: all 2s ease-in-out;
+}
+.drop .themes {
+  display: block;
 }
 
 .banner .pc-banner {
@@ -198,6 +240,10 @@ table {
 .about .bout {
   font-weight: 800;
   font-size: 18px;
+  margin-bottom: 10px;
+}
+.about .pc-about {
+  display: none;
 }
 .about .mobile-about {
   display: block;
@@ -212,14 +258,308 @@ table {
   align-items: center;
   display: flex;
   justify-content: center;
-  height: 15rem;
+  margin-top: -2rem;
+  margin-bottom: 2rem;
 }
 .about .mobile-about .imegiz img {
   height: 11rem;
   width: 10rem;
 }
 .about .mobile-about .imegiz .second-pic {
-  padding-top: 4rem;
+  padding-top: 7rem;
+}
+.about .mobile-about .imeg {
+  margin-top: 1rem;
+  height: 20rem;
+  background-image: url("/IMAGEZ/Rectangle 27.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.about .mobile-about .imeg img {
+  width: 100%;
+}
+.about .mobile-about .find {
+  background-color: #701891;
+  color: white;
+  border: none;
+  padding: 0 9px;
+  height: 2rem;
+  margin-top: 1rem;
+}
+
+.pc-services {
+  display: none;
+}
+
+.services-heading {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+
+.mobile-services {
+  display: block;
+  margin-top: 1rem;
+}
+.mobile-services .pictures {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.mobile-services .pictures .mapics {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.mobile-services .pictures .mapics .grid1 {
+  background-image: url("/IMAGEZ/Rectangle 27.png");
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 50px;
+  height: 30rem;
+  position: relative;
+}
+.mobile-services .pictures .mapics .grid1 h2 {
+  position: absolute;
+  bottom: 2px;
+}
+.mobile-services .pictures .mapics .grid1 .arrow {
+  background-color: #701891;
+  width: 35px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+.mobile-services .pictures .mapics .grid1 .arrow img {
+  height: 100%;
+}
+.mobile-services .pictures .mapics .grid2 {
+  background-image: url("/IMAGEZ/Screen Shot 2022-11-24 at 11.35.23.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 50px;
+  height: 30rem;
+  position: relative;
+}
+.mobile-services .pictures .mapics .grid2 .cancel {
+  background-color: beige;
+  height: 35px;
+  width: 35px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.mobile-services .pictures .mapics .grid2 .cancel img {
+  height: 35px;
+}
+.mobile-services .pictures .mapics .grid3 {
+  background-image: url("/IMAGEZ/Rectangle 47.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 50px;
+  height: 30rem;
+  position: relative;
+}
+.mobile-services .pictures .mapics .grid3 h2 {
+  position: absolute;
+  bottom: 2px;
+}
+.mobile-services .pictures .mapics .grid3 .arrow {
+  background-color: #701891;
+  width: 35px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+.mobile-services .pictures .mapics .grid3 .arrow img {
+  height: 100%;
+}
+
+.pc-clients {
+  display: none;
+}
+
+.mobile-clients {
+  display: block;
+  margin-top: 1rem;
+}
+.mobile-clients .header {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.mobile-clients .testimonial-pic {
+  height: 25rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+.mobile-clients .testimonial-pic .foward {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #701891;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-clients .testimonial-pic .foward img {
+  width: 70%;
+}
+.mobile-clients .name {
+  font-weight: 600;
+}
+.mobile-clients .position {
+  font-weight: 400;
+}
+.mobile-clients .testimonial1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.mobile-clients .testimonial1 .t1 {
+  background-image: url("/IMAGEZ/Rectangle 34.png");
+  background-position: center;
+}
+.mobile-clients .testimonial2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.mobile-clients .testimonial2 .name {
+  margin-bottom: 10px;
+}
+.mobile-clients .testimonial2 .position {
+  margin-bottom: 10px;
+}
+.mobile-clients .testimonial2 .t2 {
+  background-image: url("/IMAGEZ/Rectangle 40.png");
+  background-position: center;
+}
+
+.pc-insta {
+  display: none;
+}
+
+.insta {
+  margin-top: 9rem;
+  margin-bottom: 1rem;
+}
+.insta .seen {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.insta .insta-pics {
+  display: flex;
+  height: 12rem;
+  margin-bottom: 1rem;
+  gap: 5px;
+  justify-content: center;
+}
+.insta .insta-pics .denga {
+  padding-bottom: 2rem;
+}
+.insta .insta-pics .zasi {
+  padding-top: 2rem;
+}
+.insta .hashtag {
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.insta .followBtn {
+  text-align: center;
+}
+.insta .followBtn .follow {
+  background-color: #701891;
+  color: white;
+  border: none;
+  padding: 0 9px;
+  height: 30px;
+}
+
+.active {
+  display: block !important;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.footer .pc-footer {
+  display: none;
+}
+.footer .mobile-footer {
+  display: block;
+  background-color: #701891;
+  height: 15vh;
+  width: 100%;
+  color: white;
+  padding-left: 5px;
+  display: flex;
+}
+.footer .mobile-footer .row .ftr-left {
+  display: flex;
+  flex-direction: column;
+  background-color: red;
+  width: 70%;
+}
+.footer .mobile-footer .row .ftr-left .ftr-logo {
+  height: 2rem;
+  width: 5rem;
+}
+.footer .mobile-footer .row .ftr-left .copyright {
+  display: flex;
+  font-size: 10px;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+}
+.footer .mobile-footer .row .ftr-left .copyright img {
+  height: 15px;
+}
+.footer .mobile-footer .row .ftr-left .media {
+  margin-top: 5px;
+}
+.footer .mobile-footer .row .ftr-left .media img {
+  height: 15px;
+}
+.footer .mobile-footer .row .ftr-left .rights {
+  font-size: 10px;
+  padding-left: 19px;
+}
+.footer .mobile-footer .row .ftr-right {
+  background-color: blue;
+  width: 50%;
 }
 
 /*
@@ -270,7 +610,6 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
   .navbar .pc-nav .theme .top {
     position: absolute;
-    display: none;
   }
   .navbar .pc-nav .theme2 {
     display: flex;
@@ -281,10 +620,12 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
   .navbar .pc-nav .theme2 .top {
     position: absolute;
+  }
+  .navbar .pc-nav .theme2 .bottom {
     display: none;
   }
   .navbar .pc-nav .switch .top {
-    display: block;
+    display: block !important;
     position: relative;
   }
   .navbar .pc-nav .switch .bottom {
@@ -372,6 +713,321 @@ No media query since this is the default in Bootstrap because it is "mobile firs
   }
   .banner .pc-banner .container .pics .pic2 {
     padding-bottom: 3rem;
+  }
+  .about .mobile-about {
+    display: none;
+  }
+  .about .bout {
+    font-size: 23px;
+    margin-top: 4rem;
+  }
+  .about .pc-about {
+    padding-left: 10%;
+    display: block;
+    display: flex;
+    margin-top: 1rem;
+  }
+  .about .pc-about .left-about {
+    width: 40%;
+  }
+  .about .pc-about .left-about .text1 {
+    text-align: left;
+  }
+  .about .pc-about .left-about .text1 p {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .about .pc-about .left-about .imegiz {
+    align-items: center;
+    display: flex;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+  }
+  .about .pc-about .left-about .imegiz img {
+    height: 18rem;
+    width: 13rem;
+  }
+  .about .pc-about .left-about .imegiz .second-pic {
+    padding-top: 7rem;
+  }
+  .about .pc-about .right-about {
+    margin-left: 3rem;
+    margin-top: -1rem;
+    width: 40%;
+  }
+  .about .pc-about .right-about .imeg {
+    margin-top: 1rem;
+    height: 22rem;
+    background-image: url("/IMAGEZ/Rectangle 27.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .about .pc-about .right-about .imeg img {
+    width: 100%;
+  }
+  .about .pc-about .right-about .text-2 {
+    margin-top: 1rem;
+  }
+  .about .pc-about .right-about .find {
+    background-color: #701891;
+    color: white;
+    border: none;
+    padding: 0 9px;
+    height: 2rem;
+    margin-top: 1rem;
+  }
+  .mobile-services {
+    display: none;
+  }
+  .services-heading {
+    font-weight: 700;
+    font-size: 20px;
+  }
+  .pc-services {
+    display: block;
+  }
+  .pc-services .services-heading {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .pc-services .pictures {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .pc-services .pictures .mapics {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    margin-left: 5%;
+  }
+  .pc-services .pictures .mapics .grid1 {
+    background-image: url("/IMAGEZ/Rectangle 27.png");
+    background-repeat: no-repeat;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 50px;
+    height: 30rem;
+    width: 20rem;
+    position: relative;
+  }
+  .pc-services .pictures .mapics .grid1 h2 {
+    position: absolute;
+    bottom: 2px;
+  }
+  .pc-services .pictures .mapics .grid1 .arrow {
+    background-color: #701891;
+    width: 35px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+  }
+  .pc-services .pictures .mapics .grid1 .arrow img {
+    height: 100%;
+  }
+  .pc-services .pictures .mapics .grid2 {
+    background-image: url("/IMAGEZ/Screen Shot 2022-11-24 at 11.35.23.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 50px;
+    height: 30rem;
+    width: 20rem;
+    position: relative;
+  }
+  .pc-services .pictures .mapics .grid2 .cancel {
+    background-color: beige;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .pc-services .pictures .mapics .grid2 .cancel img {
+    height: 35px;
+  }
+  .pc-services .pictures .mapics .grid3 {
+    background-image: url("/IMAGEZ/Rectangle 47.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 50px;
+    height: 30rem;
+    width: 20rem;
+    position: relative;
+  }
+  .pc-services .pictures .mapics .grid3 h2 {
+    position: absolute;
+    bottom: 2px;
+  }
+  .pc-services .pictures .mapics .grid3 .arrow {
+    background-color: #701891;
+    width: 35px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    position: absolute;
+    right: 0;
+  }
+  .pc-services .pictures .mapics .grid3 .arrow img {
+    height: 100%;
+  }
+  .clients .mobile-clients {
+    display: none;
+  }
+  .clients .pc-clients {
+    display: block;
+    margin-top: 1rem;
+  }
+  .clients .pc-clients .header {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 5rem;
+  }
+  .clients .pc-clients .clients-left {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+  }
+  .clients .pc-clients .clients-left .header {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .clients .pc-clients .clients-left .testimonial-pic {
+    height: 20rem;
+    width: 25rem;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  .clients .pc-clients .clients-left .testimonial-pic .foward {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #701891;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .clients .pc-clients .clients-left .testimonial-pic .foward img {
+    width: 70%;
+  }
+  .clients .pc-clients .clients-left .name {
+    font-weight: 600;
+  }
+  .clients .pc-clients .clients-left .position {
+    font-weight: 400;
+  }
+  .clients .pc-clients .clients-left .para {
+    width: 60%;
+  }
+  .clients .pc-clients .clients-left .testimonial1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  .clients .pc-clients .clients-left .testimonial1 .t1 {
+    background-image: url("/IMAGEZ/Rectangle 34.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .clients .pc-clients .clients-right {
+    margin-top: -2.5rem;
+  }
+  .clients .pc-clients .clients-right .testimonial2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1rem;
+  }
+  .clients .pc-clients .clients-right .testimonial2 .name {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .clients .pc-clients .clients-right .testimonial2 .position {
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .clients .pc-clients .clients-right .testimonial2 .para {
+    width: 70%;
+  }
+  .clients .pc-clients .clients-right .testimonial2 .t2 {
+    background-image: url("/IMAGEZ/Rectangle 40.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .clients .pc-clients .clients-right .testimonial-pic {
+    height: 20rem;
+    width: 25rem;
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  .clients .pc-clients .clients-right .testimonial-pic .foward {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #701891;
+    width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .clients .pc-clients .clients-right .testimonial-pic .foward img {
+    width: 70%;
+  }
+  .insta .mobile-insta {
+    display: none;
+  }
+  .insta .pc-insta {
+    display: block;
+    margin-top: -4rem;
+  }
+  .insta .pc-insta .seen {
+    margin-bottom: 2rem;
+  }
+  .insta .pc-insta .seen h2 {
+    font-size: 20px;
+  }
+  .insta .pc-insta .seen h2 span {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  .insta .pc-insta .insta-pics {
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10rem;
+  }
+  .insta .pc-insta .insta-pics .pamusoro {
+    height: 18rem;
+    padding-bottom: 3rem;
+  }
+  .insta .pc-insta .insta-pics .pazasi {
+    height: 18rem;
+    padding-top: 3rem;
   }
 }
 /* Large devices (desktops, 992px and up) */
