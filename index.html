@@ -11,22 +11,25 @@
     <section class="navbar">
         <div class="mobile-nav">
             <img src="/IMAGEZ/Rectangle_53-removebg-preview.png" alt="">
-            <div class="hamburger">
+            <div class="hamburger ">
                 
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+                <div class="line line1"></div>
+                <div class="line middle"></div>
+                <div class="line line2"></div>
             </div>
+
         </div>
-        <div class="overlay">
-            <a href="#">About Us</a>
-            <a href="#">Services</a>
-            <a href="#">Testimonials</a>
-            <div class="themes">
+        <div class="dropdown-content">
+           <ol>
+            <li><a href="#">About Us</a></li>
+            <li> <a href="#">Services</a></li>
+            <li><a href="#">Testimonials</a></li>
+           </ol>
+            <div class="themes ">
                 <p>Change theme</p>
-                <div class="theme">
-                    <img class="top" src="/img/brightness (1).png" alt="">
-                    <img class="bottom" src="/img/dark-mode.png" alt="">
+                <div class="theme2">
+                    <img class="top hide show" src="/img/brightness (1).png" alt="">
+                    <img class="bottom active" src="/img/dark-mode.png" alt="">
                  </div>
 
             </div>
@@ -54,7 +57,7 @@
                     </div>
                     <div class="paratext">
                         <p>
-                            Our process enables us to experiment with ideas of all kinds, deliver on time and stay within your budget
+                            Our process enables us to experiment with ideas of all kinds, deliver on time and stay within your budget.
                         </p>
                     </div>
                     <div class="banner-btns">
@@ -75,21 +78,20 @@
                 <div class="col-md-8 right">
                     <div class="banner-pics">
                         <div class="top-pics">
-                            <div class="col-md-6 pic1">
+                            <div class="pic1">
                                 <img src="/IMAGEZ/Rectangle 2.png" alt="">
                             </div>
-                            <div class="col-md-6 pic2">
+                            <div class="pic2">
                                 <img src="/IMAGEZ/Rectangle 3.png" alt="">
                             </div>
-                        </div>
-                        <div class="bottom-pics">
-                            <div class="pic3">
+                            <div class="pic1">
                                 <img src="/IMAGEZ/Rectangle 4.png" alt="">
                             </div>
-                            <div class="pic4">
+                            <div class="pic2">
                                 <img src="/IMAGEZ/Rectangle 5.png" alt="">
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -153,8 +155,7 @@
                     We take pride in our ability to deliver complex solutions in a way that you will find effortless and easy. Our process enables us to experiment with ideas of all kinds, deliver on the same time and stay within your budget.
                 </p>
             </div>
-            <div class="imeg">
-            </div>
+           
             <button class="find">Find out more</button>
             
         </div>
@@ -330,7 +331,7 @@
                     <h2>As seen on <italic>Instagram</italic></h2>
                 </div>
                 <div class="insta-pics">
-                    <img class="denga" src="/IMAGEZ/Rectangle 47.png" alt="">
+                    <!-- <img class="denga" src="/IMAGEZ/Rectangle 47.png" alt=""> -->
                     <img class="zasi" src="/IMAGEZ/Rectangle 48.png" alt="">
                     <img class="denga" src="/IMAGEZ/Rectangle 61.png" alt="">
                     <img class="zasi" src="/IMAGEZ/Rectangle 62.png" alt="">
@@ -369,42 +370,60 @@
             </div>
         </div>
     </section>
-    <section class="footer">
-        
-            <div class="mobile-footer">
-                <div class="row">
-                    <div class="col-md-6 ftr-left">
-                        <img class="ftr-logo" src="/img/IMAGEZ/Rectangle 53.png" alt="logo">
-                        <div class="copyright">
-                            <img src="/img/IMAGEZ/Icon material-copyright.png" alt="copyright">
-                            <p>Copyright Tigzozo media 2024</p>
-                        </div>
-                        <p class="rights" >All rights reserved</p>
-                        <div class="media">
-                            <img src="/img/IMAGEZ/Icon awesome-facebook-f.png" alt="facebook">
-                            <img src="/img/IMAGEZ/Icon awesome-instagram.png" alt="">
-                        </div>
-
+    <section id="mobileFooter">
+        <div class="container">
+            <div class="row top">
+                <div class="col left">
+                    <img src="/IMAGEZ/Rectangle 53.png" alt="" class="logo">
+                    <div class="text">
+                        <p><img src="/IMAGEZ/Icon material-copyright.png" alt="copyright"> Copyright Tigzozo media 2022.</p>
+                        <p>All rights reserved</p>
                     </div>
-                    <div class="col-md-6 ftr-right">
-                        <div class="ftr-header">
-                            <h5>
-                                Quick Links
-                            </h5>
+                    <div class="icons">
+                        <img src="/IMAGEZ/Icon awesome-facebook-f.png" alt="">
+                        <img src="./IMAGEZ/Icon awesome-instagram.png" alt="">
+                    </div>
+                </div>
+                <div class="col right">
+                    <p class="p">About us</p>
+                    <div class="links">
+                        <a href="#">Our story</a>
+                        <a href="#">Our team</a>
+                        <a href="#">Testimonials</a>
+                        <a href="#">COVID-19 update</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row below">
+                <div class="col left">
+                    <p class="p">Here to help</p>
+                    <div class="links">
+                        <a href="#">Contact us</a>
+                        <a href="#">Book a session</a>
+                        <a href="#">Payment</a>
+                    </div>
+                </div>
+                <div class="col right">
+                    <p class="p">Get in touch</p>
+                    <div class="links">
+                        <div class="touch">
+                            <div class="information">
+                                <img src="./IMAGEZ/Icon material-call.png" alt="">
+                                <p>  Contact us</p>
+                            </div>
+                            <div class="information">
+                                <img src="./IMAGEZ/Icon material-email.png" alt="">
+                                <p>  john@tigzozomedia.com</p>
+                            </div>
+                            <div class="information">
+                                <img src="./IMAGEZ/Icon metro-location.png" alt="">
+                                <p>  132 East street Avondale, Harare</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div class="pc-footer">
-                <div class="row">
-                    <div class="col1"></div>
-                    <div class="col2"></div>
-                    <div class="col3"></div>
-                    <div class="col4"></div>
-                </div>
-            </div>
-        
+        </div>
     </section>
 
 
